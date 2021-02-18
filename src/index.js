@@ -8,7 +8,6 @@ import PaymentCard from './PaymentCard';
 import RecipeCard from './RecipeCard';
 import NewsHeaderCard from './NewsHeaderCard';
 import CryptoCard from './CryptoCard';
-import JobListingCard from './JobListingCard';
 
 export default {
   UserCard,
@@ -20,8 +19,7 @@ export default {
   PaymentCard,
   RecipeCard,
   NewsHeaderCard,
-  CryptoCard,
-  JobListingCard
+  CryptoCard
 };
 
 export {
@@ -34,6 +32,5 @@ export {
   PaymentCard,
   RecipeCard,
   NewsHeaderCard,
-  CryptoCard,
-  JobListingCard
+  CryptoCard
 };

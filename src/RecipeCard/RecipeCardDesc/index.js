@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import FontAwesome from 'react-fontawesome';
 
 import styles from './styles.scss';
 
 class RecipeCardDesc extends React.Component{
+  constructor(props){
+	super(props);
+	this.state = {
+	  checked: false
+	};
+  }
+
+  handleClick(props) {
+	props.likeCallback();
+
+	console.log('Click happened');
+	console.log(this.state.checked);
+	this.setState({ checked: !this.state.checked });
+	console.log(this.state.checked);
+  }
+
   render(){
     let{
       title,
       time,
-      servings,
-      likeCallback
+	  servings,
     } = this.props;
     
     return(
@@ -19,7 +34,7 @@ class RecipeCardDesc extends React.Component{
 	        {title}
 	      </div>
 
-	      <a className={styles.heart} onClick={likeCallback}>
+	      <a className={styles.heart} onClick={() => {this.handleClick(this.props);}}>
 	        <FontAwesome name='heart-o'/>
 	      </a>
 
