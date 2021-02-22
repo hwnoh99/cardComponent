@@ -123,6 +123,7 @@ const demo = () => {
           description='Nullam velit leo, pulvinar non metus feugiat, pharetra ornare enim. Vivamus ac quam a purus venenatis fringilla.'
           rating={5}
           url='https://github.com/nukeop'
+          iconButton={true}
         />
       </div>
       <h2>

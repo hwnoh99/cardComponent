@@ -7,17 +7,15 @@ class RecipeCardDesc extends React.Component{
   constructor(props){
 	super(props);
 	this.state = {
-	  checked: false
+	  checked: false,
+	  color: 'gray'
 	};
   }
 
   handleClick(props) {
 	props.likeCallback();
 
-	console.log('Click happened');
-	console.log(this.state.checked);
-	this.setState({ checked: !this.state.checked });
-	console.log(this.state.checked);
+	this.setState({ color: 'red' });
   }
 
   render(){
@@ -35,7 +33,7 @@ class RecipeCardDesc extends React.Component{
 	      </div>
 
 	      <a className={styles.heart} onClick={() => {this.handleClick(this.props);}}>
-	        <FontAwesome name='heart-o'/>
+	    '	<FontAwesome name='heart' style={{color:this.state.color}}/>
 	      </a>
 
 	      <div className={styles.time}>

@@ -22,6 +22,7 @@ class ProductCard extends React.Component {
       productName,
       description,
       buttonText,
+      iconButton,
       rating,
       url,
       ...other
@@ -41,6 +42,7 @@ class ProductCard extends React.Component {
           productName={productName}
           description={description}
           buttonText={buttonText}
+          iconButton={iconButton}
           rating={rating}
           url={url}
         />
@@ -54,6 +56,7 @@ ProductCard.propTypes = {
   price: PropTypes.number,
   productName: PropTypes.string,
   description: PropTypes.string,
+  iconButton: PropTypes.bool,
   buttonText: PropTypes.string,
   url: PropTypes.string
 };
